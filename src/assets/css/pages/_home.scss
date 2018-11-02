@@ -1,139 +1,79 @@
-.carousel-item {
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  color: white;
+
+  background-image: url('../src/assets/img/ways-bg.jpg');
+  background-repeat: no-repeat;
+  background-color: black;
+  background-position: center;
+  
   height: 100vh;
-  min-height: 300px;
-  background: no-repeat center center scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
-.slide1 {
-  background-image:url('https://placeimg.com/1200/1200/any/grayscale')
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: black;
+  border: solid #FCBB10 1px;
+  border-radius: .7rem;
+  padding: 10rem;
+
+  width: 80rem;
 }
 
-.slide2 {
-  background-image:url('https://placeimg.com/1200/1200/tech/grayscale')
+.btn-title1 {
+  font-size: 3rem;
 }
 
-.slide3 {
-  background-image:url('https://placeimg.com/1200/1200/people/grayscale')
+.book-a-ride {
+  background: rgb(253,188,17);
+  background: -moz-linear-gradient(270deg, rgba(253,188,17,1) 48%, rgba(255,231,0,1) 84%);
+  background: -webkit-linear-gradient(270deg, rgba(253,188,17,1) 48%, rgba(255,231,0,1) 84%);
+  background: linear-gradient(270deg, rgba(253,188,17,1) 48%, rgba(255,231,0,1) 84%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbc11",endColorstr="#ffe700",GradientType=1);
+
+  height: 100vh;
+  
+  background-size: 100%;
+  z-index: 0;
 }
 
-.slide4 {
-  background-image:url('https://placeimg.com/1200/1200/animals/grayscale')
-}
-
-.carousel-indicators {
-  display: flex !important;
-  align-self: flex-start;
-
-  & li {
-    align-items: flex-start;
-    margin: 10px;
-    background-color: #6A6A68;
-    border-radius: 10rem;
-    width: 3rem;
-  }
-
-  & .active {
-    background-color: #ABA3A2;
-  }
-
+.book-a-ride__city {
+  background-image: url('@../../assets/img/city.png');
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: 1300px;
+  
+  height: 100vh;
+  z-index: 10;
 }
 
 .about {
-  display: flex;
-  justify-content: center;
+  height: 80vh;
+}
 
+.airport-trans {
+  display: flex;
   flex-direction: column;
-  align-items: center;
-  
-  height: 30rem;
-
-  &-logo {
-    height: 20rem;
-  }
-}
-
-.divider1 {
-  background: url('https://placeimg.com/1200/1200/any/grayscale') center center no-repeat;
-  height: 70rem;
-  background-size: 100%;
-  background-size: cover;
-  background-position: center;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  background-size: 100%;
-}
 
-.teaser {
-  background: url('@../../assets/img/banner_divider2.jpg') center center no-repeat;
-  height: 20rem;
-  background-size: 100%;
-  background-size: cover;
+  background-image: url('@../../assets/img/airport-trans-bg.png');
   background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: 100%;
-}
-
-.teaser-video {
-  height: 80rem;
-}
-
-.blog-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  background: url('@../../assets/img/blog-bk.jpg');
-  background-position: center left;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 100%;
-  padding: 8rem;
-}
-
-.blog {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   text-align: center;
+  height: 30rem;
+  color: white;
 }
 
-.blog-post {
-  width: 30rem;
-  margin: 2rem;
-  
-  & img {
-    
-  }
-}
 
-.banner3 {
+.miami-ft {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  background: url('@../../assets/img/fashion-tv.jpg') no-repeat;
-  height: 26rem;
-  color: #fff;
+  justify-content: space-around;
 
-
+  height: 60rem;
 }
 
-
-
-.newsletter {
-  background-color: #D1D1D1;
-  height: 20rem;
-
-  &-content {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-}

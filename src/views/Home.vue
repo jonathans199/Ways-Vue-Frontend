@@ -1,70 +1,57 @@
 <template>
   <div>
     <Header/>
-    <div id="carouselExampleIndicators" class="carousel slide custom-slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-      </ol>
-      <div class="carousel-inner">
-          <div class="carousel-item active slide1"></div>
-          <div class="carousel-item slide2"></div>
-          <div class="carousel-item slide3"></div>
-          <div class="carousel-item slide4"></div>
+   
+
+    <section class="hero">
+      <h1>SELECT A SERVICE</h1>
+      <div class="hero-top">
+        <a href="/..">
+          <span class="btn-title1">CRUISE PORT SHUTTLE</span>
+
+        </a>        
       </div>
-    </div>
-
-    <section class="about">
-      <h1>WHAT ARE WE</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut fugit illo officia et obcaecati non!</p>
+      <div class="bottom-section">
+        <div>
+          <a href="/..">PORT OF MIAMI</a>
+        </div>
+        <div>
+          <a href="/..">PORT OF MIAMI</a>
+        </div>
+        <div>
+          <a href="/..">PORT OF MIAMI</a>
+        </div>
+        <div>
+          <a href="/..">PORT OF MIAMI</a>
+        </div>
+      </div>
     </section>
 
-    <section class="divider1">
+    <section class="book-a-ride">
+      <div class="book-a-ride__city">
+      </div>
     </section>
-
-    <Shop/>
     
-    <section class="teaser">
-      <h1>TEASER VIVIELA</h1>
+    <section class="about">
+      <h1>about ways</h1>
     </section>
 
-    <section class="teaser-video">
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/AlmKpOlYv4I?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <section class="airport-trans">
+      <h1>airport transportation</h1>
+      <h2>Fort Lauderdale</h2>
     </section>
-
-    <section class="blog-container">
-      <h1>BLOG</h1>
-      <div class="blog">
-        <div class="blog-post">
-          <img src="https://placeimg.com/480/480/any/grayscale" alt="">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam temporibus corrupti nesciunt doloremque atque modi, earum nemo, possimus odit sit fugiat. Minima reiciendis nihil ab enim voluptas rem nisi tempora.</p>
-          <a href="#">View more</a>
-        </div>
-        <div class="blog-post">
-          <img src="https://placeimg.com/480/480/any/grayscale" alt="">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam temporibus corrupti nesciunt doloremque atque modi, earum nemo, possimus odit sit fugiat. Minima reiciendis nihil ab enim voluptas rem nisi tempora.</p>
-          <a href="#">View more</a>
-        </div>
-        <div class="blog-post">
-          <img src="https://placeimg.com/480/480/any/grayscale" alt="">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam temporibus corrupti nesciunt doloremque atque modi, earum nemo, possimus odit sit fugiat. Minima reiciendis nihil ab enim voluptas rem nisi tempora.</p>
-          <a href="#">View more</a>
-        </div>
-        <div class="blog-post">
-          <img src="https://placeimg.com/480/480/any/grayscale" alt="">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam temporibus corrupti nesciunt doloremque atque modi, earum nemo, possimus odit sit fugiat. Minima reiciendis nihil ab enim voluptas rem nisi tempora.</p>
-          <a href="#">View more</a>
-        </div>
+    
+    <section class="miami-ft container">
+      <div class="miami">
+        <h1>miami</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a eum sunt? Exercitationem optio voluptatum beatae facilis odio rem laboriosam quam accusantium ut. Eligendi repellat a numquam dolor nulla ratione?</p>
       </div>
-       <button class="vv-button">READ MORE</button>
-      <span>INFO@VIVIELA.COM / MIAMI, FL</span>
+      <div class="miami">
+         <h1>fort lauderdale</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a eum sunt? Exercitationem optio voluptatum beatae facilis odio rem laboriosam quam accusantium ut. Eligendi repellat a numquam dolor nulla ratione?</p>
+      </div>
     </section>
-    <div class="banner3">
-      <h1>FASHION TV EVENT</h1>
-    </div>
-    <Contact/>
+
     <Footer/>
   </div>
 </template>
@@ -74,8 +61,6 @@ import axios from 'axios'
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import Shop from '@/views/Shop/Shop'
-import Contact from '@/views/Contact/Contact'
 import config from '@/config/settings'
 
 export default {
@@ -83,8 +68,6 @@ export default {
   components: {
     Footer,
     Header,
-    Contact,
-    Shop
   },
 }
 

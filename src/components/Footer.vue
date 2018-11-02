@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-2 d-flex justify-content-center align-items-center">
-          <img class="footer-logo" src="@/assets/img/yourlogo.png" alt="">
+          <img class="footer-logo" src="@/assets/img/ways-logo.png" alt="">
         </div>
         <div class="col-8">
           <ul>
@@ -28,8 +28,8 @@
   }
 
   .footer__container{
-    background-color: #E2E2E2;
-    color: #000;
+    background-color: #000;
+    color: white;
   }
 
   .footer__container ul {

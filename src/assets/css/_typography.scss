@@ -4,29 +4,43 @@ html {
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,300,400,400i,500,500i,600,700,900'); 
 
-@font-face {
-    font-family: KhalifIrsyadRegular;
-    src: url("/../@/assets/fonts/KhalifIrsyadRegular.ttf") format("truetype");
-}
+
 
 @import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700,900');
 
 h1 {
-  font-family: KhalifIrsyadRegular;
-  font-size: 6rem;
-  letter-spacing: 1rem;
+  text-transform: uppercase;
+  // font-size: 6rem;
+  letter-spacing: .5rem;
   text-align: center;
+  padding-top: 5rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   letter-spacing: 1.5rem;
-  color: #696667;
+  // color: #696667;
 }
 
 p {
   font-size: 1.5rem;
 }
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+}
+
+
+
+
 
