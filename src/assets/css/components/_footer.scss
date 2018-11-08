@@ -1,7 +1,10 @@
 footer {
     // height: 30rem;
     display: flex;
-    background: #fff;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #000;
+    color: white;
     
 
     ul {
@@ -14,6 +17,21 @@ footer {
     }
 
 }
+
+
+.footer__container span{
+    font-size: 2.5rem;
+  }
+
+
+//   .footer__container ul {
+//     font-size: 15px;
+//   }
+
+//   .footer__container ul li {
+//     margin-right: 0px;
+//     margin-left: 40px;
+//   }
 
 .footer-logo {
     height: 7rem;

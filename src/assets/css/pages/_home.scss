@@ -1,8 +1,8 @@
 .hero {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  align-items: flex-end;
+  flex-wrap: wrap;
   
   color: white;
 
@@ -10,24 +10,97 @@
   background-repeat: no-repeat;
   background-color: black;
   background-position: center;
+  background-size: cover;
+  padding: 30rem 0;
   
   height: 100vh;
+
+  &-title { 
+    position: absolute;
+    top: 20rem;
+    font-size: 5rem;
+    font-weight: 100;
+  }
 }
 
-.hero-top {
+.top-btn {
+  width: 90%;
+  height: 200px;
   display: flex;
-  justify-content: space-between;
+  align-content: center;
+  margin: 5rem;
 
   background-color: black;
   border: solid #FCBB10 1px;
-  border-radius: .7rem;
-  padding: 10rem;
+  border-radius: 11px;
+  // padding: 5rem 10rem;
 
-  width: 80rem;
+  &:hover {
+    border: solid #FCBB10 4px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }  
+  
+  &__fourpoints {
+    background-image: url('@../../assets/img/fourpointslogo.png');
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 65%;
+    background-position: center center;
+    border-radius: 11px 0 0 11px;
+
+    width: 30rem;
+  }
+
+  &__rightside {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 5rem;
+  }
+  
+  &__title {
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 5px;
+  }
+
+  &__subtitle {
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+  }
 }
 
-.btn-title1 {
-  font-size: 3rem;
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 90%;
+  // padding: 5rem 0;
+
+  &__btn {
+    width: 46%;
+    margin: 5rem 0;
+    padding: 6rem 5rem;
+    background-color: black;
+    border: solid #FCBB10 1px;
+    border-radius: 11px;
+  }
+
+  &__btn:hover {
+    border: solid #FCBB10 4px;
+    padding: 5rem 4rem;
+
+  }
+
+  & h1 {
+    font-size: 4rem;
+  }
+
+
 }
 
 .book-a-ride {
@@ -37,25 +110,178 @@
   background: linear-gradient(270deg, rgba(253,188,17,1) 48%, rgba(255,231,0,1) 84%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbc11",endColorstr="#ffe700",GradientType=1);
 
-  height: 100vh;
+  height: 65vh;
   
   background-size: 100%;
   z-index: 0;
+  position: relative;
+
+
+  &__city {
+    background-image: url('@../../assets/img/city.png');
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: 1300px;
+    // position: relative;
+
+    height: 100%;
+    z-index: 10;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 10rem;
+    
+  }
+
+  &__form {
+    background-color: white;
+    width: 45%;
+  }
+
+  &__slogan {
+    width: 45%;
+    text-align: left;
+
+    font-size: 8rem;
+    color: white;
+    text-shadow: 5px 5px rgba(0, 0, 0, 0.342);
+    padding-left: 3rem;
+  }
+
+  &__form {
+    height: 100%;
+    position: relative;
+    border-radius: 0 0 10px 10px;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+         box-shadow: 0 10px 6px -6px #777;
+  }
+
+  &__formlabel{
+    
+    background-color: #FCBB10;
+    width: 300px;
+    height: 3rem;
+    margin-top: -3rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+    border-radius: 11px 11px 0 0;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &__formcontent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 5rem;
+  }
+
+  &__formfield {
+    background-color: #fff399;
+    display: flex;
+    justify-content: space-around;
+
+    width: 90%;
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 40px;
+    
+      & h5 {
+        font-size: 1.5rem;
+        font-weight: 600;
+      }
+
+      & input {
+        width: 70%;
+        border: none;
+        font-size: 1.5rem;
+      }
+
+      & input[type=text] {
+        background-color: #ffe30242;
+        color: black;
+    }
+  }
+
+  &__passangers {
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+    padding: 3rem ;
+
+    & select {
+      width: 60px;
+      border-radius: 0;
+    }
+  }
+
+  &__oneway {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+  
+    & button {
+      background-color: #FCBB10;
+      border-radius: 20px;
+      border: none;
+      font-size: 1.5rem;
+      padding: 2rem;
+      margin-left: 3rem;
+      font-weight: 600;
+    }
+  }
+
+  &__lowertext {
+    padding: 4rem 0; 
+    border-bottom: solid 1px #777;
+  }
 }
 
-.book-a-ride__city {
-  background-image: url('@../../assets/img/city.png');
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: 1300px;
-  
-  height: 100vh;
-  z-index: 10;
-}
+
+
+
+
 
 .about {
-  height: 80vh;
+  height: 100%;
+  padding: 10rem 0;
+  background-image: url('../src/assets/img/line.png');
+  background-repeat: no-repeat;
+  background-position: -100% 42%;
+  
+
+  &-features {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 10rem;
+
+    &-1 {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding: 5rem;
+      text-align: center;
+    }
+
+    & h1 {
+      padding-top: 4rem;
+    }
+  }
 }
+
+
 
 .airport-trans {
   display: flex;
@@ -70,10 +296,19 @@
 }
 
 
-.miami-ft {
+.cities {
   display: flex;
   justify-content: space-around;
 
   height: 60rem;
+  padding-top: 10rem;
+
+  &_sides {
+    margin: 4rem;
+  }
+
+  & h1 {
+    border-bottom: solid 1px #FCBB10
+  }
 }
 
