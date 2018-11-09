@@ -11,24 +11,26 @@
   background-color: black;
   background-position: center;
   background-size: cover;
-  padding: 30rem 0;
+  padding: 20% 0;
   
-  height: 100vh;
+  
+  height: 100%;
 
   &-title { 
     position: absolute;
-    top: 20rem;
-    font-size: 5rem;
+    top: 17rem;
+    font-size: 3rem;
     font-weight: 100;
   }
 }
 
 .top-btn {
   width: 90%;
-  height: 200px;
+  height: 20rem;
+  margin-bottom: 2%;
   display: flex;
   align-content: center;
-  margin: 5rem;
+  // margin: 5rem;
 
   background-color: black;
   border: solid #FCBB10 1px;
@@ -83,8 +85,8 @@
 
   &__btn {
     width: 46%;
-    margin: 5rem 0;
-    padding: 6rem 5rem;
+    margin: 2% 0;
+    padding: 4rem;
     background-color: black;
     border: solid #FCBB10 1px;
     border-radius: 11px;
@@ -92,12 +94,12 @@
 
   &__btn:hover {
     border: solid #FCBB10 4px;
-    padding: 5rem 4rem;
+
 
   }
 
   & h1 {
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
 
 
@@ -110,7 +112,7 @@
   background: linear-gradient(270deg, rgba(253,188,17,1) 48%, rgba(255,231,0,1) 84%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fdbc11",endColorstr="#ffe700",GradientType=1);
 
-  height: 65vh;
+  height: 900px;
   
   background-size: 100%;
   z-index: 0;
