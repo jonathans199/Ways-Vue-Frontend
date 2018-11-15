@@ -72,13 +72,13 @@
     
     <section class="about container">
       <h1>about ways</h1>
-      <p>Ways Shuttle Solutions is a web/mobile application designed for you to book shuttle services. Ways is built to help you book reliable, flexible and convenient shuttle service to your destination.</p>
+      <p>Ways Shuttle Solutions is a web/mobile application designed for you to book shuttle services. Ways is built to help you experience reliable, flexible and convenient shuttle service to your destination.</p>
       <div class="about-features container">
         <div class="about-features-1">
           <img src="../../src/assets/img/shield.png" alt="">
           <h1>SAFETY FIRST</h1>
           <p>All affiliated ground transportation companies are licensed and insured.  
-          <br>Drivers must pass extensive background checks and pass training protocol)</p>
+          <br>Drivers must pass extensive background checks and pass training protocol</p>
         </div>
         <div class="about-features-1">
           <img src="../../src/assets/img/24-hours.png" alt="">
@@ -88,26 +88,18 @@
         <div class="about-features-1">
           <img src="../../src/assets/img/acreditations.png" alt="">
           <h1>ACREDITATIONS</h1>
-          <p>It has survived not only five centuries, <b>but also the leap into electronic typesetting,</b> remaining essentially unchanged.</p>
+          <p>We are a start-up company, in the process of building trustworthy acreditations.</p>
         </div>
       </div>
     </section>
 
-    <section class="airport-trans">
+    <!-- <section class="airport-trans">
       <h1>airport transportation</h1>
       <h2>Fort Lauderdale</h2>
-    </section>
+      <p>Proper planning &amp; preparation prevents a poor travel experience.  Use any mobile device or computer and schedule your ride now!</p>
+    </section> -->
     
-    <section class="cities container">
-      <div class="cities_sides">
-        <h1>miami</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a eum sunt? Exercitationem optio voluptatum beatae facilis odio rem laboriosam quam accusantium ut. Eligendi repellat a numquam dolor nulla ratione?</p>
-      </div>
-      <div class="cities_sides">
-         <h1>fort lauderdale</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam a eum sunt? Exercitationem optio voluptatum beatae facilis odio rem laboriosam quam accusantium ut. Eligendi repellat a numquam dolor nulla ratione?</p>
-      </div>
-    </section>
+    
 
     <Footer/>
   </div>

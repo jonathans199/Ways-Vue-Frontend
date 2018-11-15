@@ -5,9 +5,10 @@
         </div>
         <div class="">
           <ul>
-            <li>ABOUT</li>
-            <li>SHOP</li>
-            <li>COLLECTIONS</li>
+            <li>CONTACT US</li>
+            <li>FAQ</li>
+            <li>PRIVACY POLICY</li>
+            <li>TERMS OF USE</li>
           </ul>
         </div>
         <div class="col-2 d-flex justify-content-center align-items-center">

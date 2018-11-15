@@ -1,12 +1,12 @@
 <template>
   <div>
     <div class="contact-bar">
-      <span>CONTACT US / 1800 - WAYS 123 </span>
-      <a href="/.."> INFO@WAYSFL.COM </a>
+      <span>1800-529-6061 </span>
+      <a href="mailto:info@waysfl.com"> INFO@WAYSFL.COM </a>
     </div>
     <nav class="navbar__custom">
       <div class="menu">
-          <a href="/"><img class="header__logo" alt="Ways Logo" src="@/assets/img/ways-logo.png"></a>
+          <a href="/"><img class="header__logo" alt="Ways Logo" src="../assets/img/ways-logo.png"></a>
           <div class="menu-container">
             <a href="/">BOOK A RIDE</a>
             <a href="/">SERVICES</a>

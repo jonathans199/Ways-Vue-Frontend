@@ -41,7 +41,7 @@
               <span class="submit-arrow" style="flex-grow: 1;"><i class="fa fa-arrow-right" /></span>
             </button>
           </div>
-          <h3 class="col-12 text-center mt-5">INFO@VIVIELA.COM / MIAMI </h3>
+          <h3 class="col-12 text-center mt-5">INFO@waysfl.COM / MIAMI </h3>
         </div>
       </div>
   </section>
