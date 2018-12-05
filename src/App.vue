@@ -21,6 +21,8 @@ import config from '@/config/settings'
 
 Vue.use(BootstrapVue)
 Vue.use(Toasted)
+var VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo)
 
 export default {
   created(){

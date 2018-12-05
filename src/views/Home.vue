@@ -1,12 +1,10 @@
 <template>
   <div>
     <Header/>
-   
-
     <section class="hero">
       <h1 class="hero-title">SELECT A SERVICE</h1>
       <div class="top-btn">
-        <a class="top-btn__container" href="/..">
+        <a v-scroll-to=" '#book-a-ride' " class="top-btn__container" href="#">
           <div class="top-btn__fourpoints"></div>
           <div class="top-btn__rightside">
             <span class="top-btn__title">CRUISE PORT SHUTTLE</span>
@@ -15,24 +13,24 @@
         </a>        
       </div>
       <div class="bottom-section">
-        <a class="bottom-section__btn" href="/..">
+        <a v-scroll-to=" '#book-a-ride' " class="bottom-section__btn" href="#">
           <h1>PORT OF MIAMI</h1>
         </a>
-        <a class="bottom-section__btn" href="/..">
+        <a v-scroll-to=" '#book-a-ride' " class="bottom-section__btn" href="#">
           <h1>MIAMI AIRPORT</h1>
         </a>
       </div>
       <div class="bottom-section">
-        <a class="bottom-section__btn" href="/..">
+        <a v-scroll-to=" '#book-a-ride' " class="bottom-section__btn" href="#">
           <h1>PORT EVERGLADES</h1>
         </a>
-        <a class="bottom-section__btn" href="/..">
+        <a v-scroll-to=" '#book-a-ride' " class="bottom-section__btn" href="#">
           <h1>FT LAUDERDALE AIRPORT</h1>
         </a>
       </div>
     </section>
 
-    <section class="book-a-ride">
+    <section class="book-a-ride" id="book-a-ride">
       <div class="book-a-ride__city"></div>
       <div class="book-a-ride__content">
         <form class="book-a-ride__form" action="submit">
@@ -56,11 +54,10 @@
               </select>
             </div>
             <div class="book-a-ride__oneway">
-              <h1>$95 ONE WAY</h1>
-              <button>BOOK NOW</button>
+              <h1 class="input-label"><input class="radio-btn" type="radio" name="gender" value="one-way">$95 ONE WAY</h1> <br>
+              <h1 class="input-label"><input class="radio-btn" type="radio" name="gender" value="round-trip">$95 ROUND TRIP</h1>
             </div>
             <div class="book-a-ride__oneway">
-              <h1>$95 ROUND TRIP</h1>
               <button>BOOK NOW</button>
             </div>
             <p class="text-center book-a-ride__lowertext">Ways nonstop shuttle will take you directly to your destination. Different from share ride, you do not share the ride with other passengers. Good for families, friends and large groups.</p>
@@ -70,7 +67,7 @@
       </div>
     </section>
     
-    <section class="about container">
+    <section class="about container" id="about-us">
       <h1>about ways</h1>
       <p>Ways Shuttle Solutions is a web/mobile application designed for you to book shuttle services. Ways is built to help you experience reliable, flexible and convenient shuttle service to your destination.</p>
       <div class="about-features container">
@@ -98,8 +95,6 @@
       <h2>Fort Lauderdale</h2>
       <p>Proper planning &amp; preparation prevents a poor travel experience.  Use any mobile device or computer and schedule your ride now!</p>
     </section> -->
-    
-    
 
     <Footer/>
   </div>

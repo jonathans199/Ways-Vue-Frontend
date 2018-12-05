@@ -12,8 +12,7 @@
   background-position: center;
   background-size: cover;
   padding: 20% 0;
-  
-  
+
   height: 100%;
 
   &-title { 
@@ -94,15 +93,11 @@
 
   &__btn:hover {
     border: solid #FCBB10 4px;
-
-
   }
 
   & h1 {
     font-size: 2.5rem;
   }
-
-
 }
 
 .book-a-ride {
@@ -137,7 +132,6 @@
     position: absolute;
     width: 100%;
     top: 10rem;
-    
   }
 
   &__form {
@@ -226,18 +220,17 @@
   }
 
   &__oneway {
-    display: flex;
+    width: 90%;
     align-items: center;
     padding: 1rem;
 
-  
     & button {
       background-color: #FCBB10;
       border-radius: 20px;
       border: none;
       font-size: 1.5rem;
       padding: 2rem;
-      margin-left: 3rem;
+      // margin-left: 3rem;
       font-weight: 600;
     }
   }
@@ -248,8 +241,47 @@
   }
 }
 
+.radio-btn{
+    float: left;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     display: inline-block;
+     position: relative;
+     background-color: #fff399;
+     color: #666;
+    //  top: 10px;
+     height: 30px;
+     width: 30px;
+     border: 0;
+     border-radius: 50px;
+     cursor: pointer;     
+     margin-right: 7px;
+     outline: none;
+}
+.radio-btn:checked::before
+{
+     position: absolute;
+     font: 13px/1 'Open Sans', sans-serif;
+     left: 11px;
+     top: 7px;
+     content: '\02143';
+     transform: rotate(40deg);
+}
+.radio-btn:hover
+{
+     background-color: #f7f7f7;
+}
+.radio-btn:checked
+{
+     background-color: #fff399;
+}
 
 
+.input-label {
+  float: left;
+  padding: 10px 0;
+}
 
 
 
@@ -260,7 +292,6 @@
   background-repeat: no-repeat;
   background-position: -100% 42%;
   
-
   &-features {
     display: flex;
     justify-content: space-between;
@@ -282,8 +313,6 @@
     }
   }
 }
-
-
 
 .airport-trans {
   display: flex;
@@ -314,3 +343,60 @@
   }
 }
 
+@media (max-width: 1000px) {
+  .about-features {
+    flex-direction: column;
+  }
+
+  .book-a-ride{
+    &__content {
+      flex-direction: column;
+    }
+    &__slogan {
+      display: none;
+    }
+    &__form {
+      width: 95%;
+    }
+    &__formcontent {
+      padding: 2rem;
+    }
+  }
+
+  .about {
+    padding: 10rem 2rem;
+    text-align: center;
+  }
+
+  .bottom-section__btn {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 85% 0;
+  }
+
+  .top-btn__fourpoints{
+   display: none;
+  }
+  .top-btn__title {
+    font-size: 2rem;
+  }
+
+  .top-btn__title {
+    font-size: 1.5rem;
+  }
+
+  .top-btn__subtitle {
+    font-size: 0.5rem;
+  }
+
+  .bottom-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .bottom-section__btn {
+    padding: 3rem;
+  }
+
+}

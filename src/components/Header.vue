@@ -1,18 +1,17 @@
 <template>
   <div>
     <div class="contact-bar">
-      <span>1800-529-6061 </span>
-      <a href="mailto:info@waysfl.com"> INFO@WAYSFL.COM </a>
+      <a class="contact-bar__links" href="tel:1800-529-6061">1800-529-6061 </a>
+      <a class="contact-bar__links" href="mailto:info@waysfl.com"> INFO@WAYSFL.COM </a>
     </div>
     <nav class="navbar__custom">
       <div class="menu">
           <a href="/"><img class="header__logo" alt="Ways Logo" src="../assets/img/ways-logo.png"></a>
           <div class="menu-container">
-            <a href="/">BOOK A RIDE</a>
-            <a href="/">SERVICES</a>
-            <a href="/">MY TRIPS</a>
-            <a href="/">CONTACT</a>
-            <a href="/">ABOUT US</a>
+            <!-- <a href="#" v-scroll-to=" '#services' ">SERVICES</a> -->
+            <a href="#" v-scroll-to=" '#book-a-ride' ">BOOK A RIDE</a>
+            <router-link to="/faq"> FAQ</router-link>
+            <a href="#" v-scroll-to=" '#about-us' ">ABOUT US</a>
           </div>
       </div>
     </nav>
@@ -30,65 +29,8 @@ export default {
   data(){
     return{
       count: 0,
-      items:[]
+      items:[],
     }
-  },
-
-  created(){
-    this.updateCart()
-    serverBus.$on('updateHeaderCart', () => {
-      this.updateCart()
-    })
-  },
-
-  methods:{
-    
-    updateCart(){
-      this.items = []
-      let cartProducts = JSON.parse(config.getLocalCart())
-          cartProducts.map((product,index) => {
-            this.fetchProducts(product)
-          })
-    },
-
-    fetchProducts(product){
-      axios
-      .get(config.defaultURL + config.storeUUID + '/client/products/' + product.uuid)
-      .then((response) => {
-        let item = response.data
-        if(item.images.length ==  0) {
-          item['images'] = [{
-            thumb: '/img/default.jpg'
-          }]
-        }
-        this.items.push({
-          name:item.name,
-          qty:product.qty,
-          images:item.images
-        })
-        this.count = this.items.length
-      })
-      .catch(function(error){
-        console.log(error)
-      })
-
-    },
-    
-    openNav() {
-      document.getElementById("myNav").style.height = "100%"
-    },
-
-    closeNav() {
-      document.getElementById("myNav").style.height = "0%"
-    },
-
-    // scroll(id){
-    //   let data = async() => {
-    //     await helper.goToByScroll(id)
-    //     await this.closeNav()
-    //   }
-    //   data()
-    // }
   }
 }
 </script>

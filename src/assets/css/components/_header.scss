@@ -20,6 +20,11 @@ header {
     & span{
       padding-right: 2rem;
     }
+
+    &__links {
+      padding-top: .5rem;
+      padding-right: 2rem;
+    }
   }
 
   .navbar__custom {
@@ -70,13 +75,35 @@ header {
     color: black;
     font-size: 2rem;
     font-weight: 500;
-    
   }
 
   .menu-container {
     width: 100%;
   }
 
+  @media (max-width: 1000px){
+    .menu {
+      flex-direction: column;
+      text-align: center;
+    }
+    .header__logo {
+      height: 9rem;
+    }
+    .menu-container {
+      padding-left: 7rem;
+    }
+    .menu-container a {
+      font-size: 14px;
+    }
+    .hero-title {
+      top: 27rem !important;
+    }
+    .sm-links {
+      margin-left: 1rem;
+    }
+    
+    
+  }
 
 
  
