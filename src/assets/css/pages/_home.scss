@@ -1,3 +1,5 @@
+
+
 .hero {
   display: flex;
   justify-content: center;
@@ -180,6 +182,13 @@
     padding: 5rem;
   }
 
+  &__destiny{
+    width: 70%;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+  }
+
   &__formfield {
     background-color: #fff399;
     display: flex;
@@ -223,6 +232,9 @@
     width: 90%;
     align-items: center;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     & button {
       background-color: #FCBB10;
@@ -232,6 +244,7 @@
       padding: 2rem;
       // margin-left: 3rem;
       font-weight: 600;
+      cursor: pointer;
     }
   }
 
@@ -349,6 +362,7 @@
   }
 
   .book-a-ride{
+
     &__content {
       flex-direction: column;
     }
@@ -360,6 +374,13 @@
     }
     &__formcontent {
       padding: 2rem;
+    }
+
+    &__destiny{
+      width: 70%;
+      background-color: transparent;
+      border: none;
+      font-size: 1.5rem;
     }
   }
 
