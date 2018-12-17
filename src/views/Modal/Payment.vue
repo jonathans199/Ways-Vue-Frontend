@@ -1,9 +1,9 @@
 <template>
   <div>
-    <b-modal ref="myModalRef" hide-footer   >
+    <b-modal ref="myModalRef" hide-footer class="modal-custom"  >
       <div v-if="step === 1">
         <div class="d-block text-center">
-          <h3>Info <i class="fa fa-info"></i></h3>
+          <h3>YOUR INFORMATION</h3>
         </div>
 
         <b-form class="mt-5"  >
@@ -64,8 +64,8 @@
         </div>
 
         <div class="payment__content">
-          <img class="payment__content-img" src="/img/payment.svg" alt="">
-          <h2 class="mt-5 text-success">Payment Success</h2>
+          <img class="payment__content-img" src="/img/check.svg" alt="">
+          <h1 class="mt-5">Payment Success</h1>
           <h4 class="mt-1">We have emailed you with a confirmation of your trip</h4>
         </div>
         
@@ -80,10 +80,21 @@
 </template>
 
 <style lang="scss" scoped>
-  /**
-  * The CSS shown here will not be introduced in the Quickstart guide, but shows
-  * how you can use CSS to style your Element's container.
-  */
+ 
+  .modal-content{
+    padding: 5rem;
+  }
+
+  .form-group {
+    font-size: 14px;
+    padding: 1rem 5rem;
+  }
+
+  .form-control {
+    font-size: 14px;
+    padding: 1.5rem;
+  }
+
   .payment__content-img{
     max-width: 50%
   }
