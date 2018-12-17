@@ -196,7 +196,7 @@ export default {
         if(response.status === 201) {
           this.loading = false
           localStorage.setItem('currentRide', JSON.stringify(response.data))
-          serverBus.$emit('openPayment')
+          serverBus.$emit('openPayment', response.data.ride_price)
         }
       })
       .catch((error) => {

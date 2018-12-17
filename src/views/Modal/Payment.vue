@@ -1,59 +1,79 @@
 <template>
   <div>
     <b-modal ref="myModalRef" hide-footer   >
-      <div class="d-block text-center">
-        <h3>Info <i class="fa fa-info"></i></h3>
-      </div>
+      <div v-if="step === 1">
+        <div class="d-block text-center">
+          <h3>Info <i class="fa fa-info"></i></h3>
+        </div>
 
-      <b-form class="mt-5"  >
-        <b-form-group id="exampleInputGroup1"
-                      label="Your Name:"
-                      label-for="exampleInput1"
-                      >
-          <b-form-input id="exampleInput1"
-                        type="email"
-                        v-model="form.name"
-                        required
-                        placeholder="">
-          </b-form-input>
-        </b-form-group>
-        <b-form-group id="exampleInputGroup2"
-                      label="Your Phone"
-                      label-for="exampleInput2">
-          <b-form-input id="exampleInput2"
-                        type="text"
-                        v-model="form.phone"
-                        required
-                        placeholder="">
-          </b-form-input>
-        </b-form-group>
-        <b-form-group id="exampleInputGroup3"
-                      label="Email:"
-                      label-for="exampleInput3">
+        <b-form class="mt-5"  >
+          <b-form-group id="exampleInputGroup1"
+                        label="Your Name:"
+                        label-for="exampleInput1"
+                        >
+            <b-form-input id="exampleInput1"
+                          type="email"
+                          v-model="form.name"
+                          required
+                          placeholder="">
+            </b-form-input>
+          </b-form-group>
+          <b-form-group id="exampleInputGroup2"
+                        label="Your Phone"
+                        label-for="exampleInput2">
             <b-form-input id="exampleInput2"
-                        type="text"
-                        v-model="form.email"
-                        required
-                        placeholder="">
-          </b-form-input>
-        </b-form-group>
-        <hr>
-        <b-form-group id="exampleInputGroup3" label="CARD INFORMATION" label-for="exampleInput3">
-            <div class="stripe__container">
-              <form action="/charge" method="post" id="payment-form">
-                <div class="">
-                  <!-- <input type="number" pattern="[0-9]*"> --> 
-                  <div id="card-element" >
+                          type="text"
+                          v-model="form.phone"
+                          required
+                          placeholder="">
+            </b-form-input>
+          </b-form-group>
+          <b-form-group id="exampleInputGroup3"
+                        label="Email:"
+                        label-for="exampleInput3">
+              <b-form-input id="exampleInput2"
+                          type="text"
+                          v-model="form.email"
+                          required
+                          placeholder="">
+            </b-form-input>
+          </b-form-group>
+          <hr>
+          <b-form-group id="exampleInputGroup3" label="CARD INFORMATION" label-for="exampleInput3">
+              <div class="stripe__container">
+                <form action="/charge" method="post" id="payment-form">
+                  <div class="">
+                    <!-- <input type="number" pattern="[0-9]*"> --> 
+                    <div id="card-element" >
+                    </div>
+                    <div id="card-errors" role="alert"></div>
                   </div>
-                  <div id="card-errors" role="alert"></div>
-                </div>
-                <button  v-if="!loading" class="btn btn-lg btn-block btn-warning mt-5 payment-button" type="submit"   >PAY NOW</button>
-                <button v-if="loading" class="btn btn-lg btn-block btn-warning mt-5 payment-button" disabled>Loading <i class="fa fa-spinner fa-spin"/></button>
-              </form>
-            </div>
+                  <button  v-if="!loading" class="btn btn-lg btn-block btn-warning mt-5 payment-button" type="submit"   >PAY ${{ride_price}} USD</button>
+                  <button v-if="loading" class="btn btn-lg btn-block btn-warning mt-5 payment-button" disabled>Loading <i class="fa fa-spinner fa-spin"/></button>
+                </form>
+              </div>
 
+          </b-form-group>
+        </b-form>
+
+      </div>
+      
+      <div v-if="step === 2">
+        <div class="d-block text-center">
+          <h3>Payment Completed <i class="fa fa-success"></i></h3>
+        </div>
+
+        <div class="payment__content">
+          <img class="payment__content-img" src="/img/payment.svg" alt="">
+          <h2 class="mt-5 text-success">Payment Success</h2>
+          <h4 class="mt-1">We have emailed you with a confirmation of your trip</h4>
+        </div>
+        
+        <b-form-group id="exampleInputGroup3" label-for="exampleInput3">
+            <button @click="hideModal" class="btn btn-lg btn-block btn-secondary payment-button" type="submit"   >CLOSE</button>
         </b-form-group>
-      </b-form>
+
+      </div>
 
     </b-modal>
   </div>
@@ -64,8 +84,18 @@
   * The CSS shown here will not be introduced in the Quickstart guide, but shows
   * how you can use CSS to style your Element's container.
   */
- 
+  .payment__content-img{
+    max-width: 50%
+  }
 
+  .payment__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+  }
+     
   .StripeElement {
     background-color: white;
     padding: 10px 12px;
@@ -140,19 +170,19 @@ export default {
       form:{},
       order:{},
       stripeResponse: {},
-      loading: false
+      loading: false,
+      ride_price: 0,
+      step: 1
     }
   },
 
   created(){
-    serverBus.$on('openPayment', () => {
+    serverBus.$on('openPayment', (ride_price) => {
+      this.ride_price = ride_price
+      this.createStripe()
       this.showModal()
     })
-  },
-
-  mounted(){
-    // this.showModal()
-    this.createStripe()
+    
   },
 
   methods: {
@@ -161,6 +191,11 @@ export default {
     },
 
     hideModal() {
+      this.form = {}
+      this.order = {}
+      this.loading = false
+      this.ride_price = 0
+      this.step = 1
       this.$refs.myModalRef.hide()
     },
     
@@ -356,6 +391,7 @@ export default {
             closeOnSwipe: true
           })
           this.loading = false
+          this.step = 2
         }
       })
       .catch((err) => {
