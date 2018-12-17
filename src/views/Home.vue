@@ -69,11 +69,11 @@
                   </select>
                 </div>
                 <h1 class="input-label">
-                  <input class="radio-btn" v-model="form.round_trip" type="radio" name="gender" :value="false">$95 ONE WAY
+                  <input class="radio-btn" v-model="form.round_trip" type="radio" name="gender" :value="false"> ONE WAY
                 </h1> 
                 <br>
                 <h1 class="input-label">
-                  <input class="radio-btn" v-model="form.round_trip" type="radio" name="gender" :value="true">$95 ROUND TRIP
+                  <input class="radio-btn" v-model="form.round_trip" type="radio" name="gender" :value="true"> ROUND TRIP
                 </h1>
               </div>
 
@@ -156,7 +156,7 @@ export default {
   methods: {
     fetchDropOff(){
       axios({
-        url: config.defaultURL + '/rides?type=12',
+        url: config.defaultURL + '/points?type=12',
         method:'get',
         data:this.form,
         headers: {
