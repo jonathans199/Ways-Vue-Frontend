@@ -4,7 +4,7 @@
     <section class="hero">
       <h1 class="hero-title">SELECT A SERVICE</h1>
       <div class="top-btn">
-        <a v-scroll-to=" '#book-a-ride' " class="top-btn__container" href="#">
+        <a href="https://app.waysfl.com/#/" target="_blank" class="top-btn__container">
           <div class="top-btn__fourpoints"></div>
           <div class="top-btn__rightside">
             <span class="top-btn__title">CRUISE PORT SHUTTLE</span>
@@ -109,6 +109,15 @@
           <h1>ACREDITATIONS</h1>
           <p>We are a start-up company, in the process of building trustworthy acreditations.</p>
         </div>
+      </div>
+    </section>
+
+    <section class="airport-trans">
+      <div class="airport-trans__text">
+        <p>Proper <b>planning</b> and preparation </br>
+        prevents a poor travel experience.</p>
+        <b style="font-size: 20px;"> #dontbethepersoninthemiddleofthestreet</b>
+        <p>Use any mobile device and schedule </br> your ride <b>now</b>! </p>
       </div>
     </section>
     
