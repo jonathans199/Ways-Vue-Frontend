@@ -9,9 +9,11 @@
           <a href="/"><img class="header__logo" alt="Ways Logo" src="../assets/img/ways-logo.png"></a>
           <div class="menu-container">
             <!-- <a href="#" v-scroll-to=" '#services' ">SERVICES</a> -->
-            <a href="#" v-scroll-to=" '#book-a-ride' ">BOOK A RIDE</a>
-            <router-link to="/faq"> FAQ</router-link>
-            <a href="#" v-scroll-to=" '#about-us' ">ABOUT US</a>
+            <router-link to="/" v-scroll-to=" '#book-a-ride' ">BOOK A RIDE</router-link> 
+            <!-- <a href="/home" v-scroll-to=" '#book-a-ride' ">BOOK A RIDE</a> -->
+            <router-link to="/faq">FAQ</router-link>
+            <router-link to="/" v-scroll-to=" '#about-us' ">ABOUT US</router-link>
+            <!-- <a href="#" v-scroll-to=" '#about-us' ">ABOUT US</a> -->
           </div>
       </div>
     </nav>
