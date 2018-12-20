@@ -38,6 +38,18 @@
                           placeholder="">
             </b-form-input>
           </b-form-group>
+
+          <b-form-group id="exampleInputGroup3"
+                        label="Add airline and flight #  /  cruise name"
+                        label-for="exampleInput3">
+              <textarea 
+                        class="form-control"
+                        type="text"
+                        v-model="form.notes"
+                        placeholder="E.g: American airlines #66 / Harmony of the seas">
+              </textarea>
+          </b-form-group>
+
           <hr>
           <b-form-group id="exampleInputGroup3" label="CARD INFORMATION" label-for="exampleInput3">
               <div class="stripe__container">
@@ -317,7 +329,8 @@ export default {
         method:'post',
         data:{
           ride_id: ride.id,
-          passenger_qty: ride.passenger_qty
+          passenger_qty: ride.passenger_qty,
+          notes: this.form.notes
         },
         headers: {
           "content-type": "application/json"
