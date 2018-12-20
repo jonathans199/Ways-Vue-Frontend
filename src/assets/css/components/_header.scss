@@ -91,7 +91,10 @@ header {
       height: 9rem;
     }
     .menu-container {
-      padding-left: 7rem;
+      padding-left: 0;
+
+      clip-path: none;
+      height: 5rem;
     }
     .menu-container a {
       font-size: 14px;

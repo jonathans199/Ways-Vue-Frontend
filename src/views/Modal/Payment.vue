@@ -8,7 +8,7 @@
 
         <b-form class="mt-5"  >
           <b-form-group id="exampleInputGroup1"
-                        label="Your Name:"
+                        label="First and last name"
                         label-for="exampleInput1"
                         >
             <b-form-input id="exampleInput1"
@@ -19,7 +19,7 @@
             </b-form-input>
           </b-form-group>
           <b-form-group id="exampleInputGroup2"
-                        label="Your Phone"
+                        label="Cell phone / phone number"
                         label-for="exampleInput2">
             <b-form-input id="exampleInput2"
                           type="text"
