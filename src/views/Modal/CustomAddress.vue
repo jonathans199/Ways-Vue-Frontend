@@ -3,7 +3,7 @@
     <b-modal ref="myModalRef" hide-footer class="modal-custom"  >
       <div v-if="step === 1">
         <div class="d-block text-center">
-          <h3>YOUR INFORMATION</h3>
+          <h3>Custom Address</h3>
         </div>
 
         <b-form class="mt-5"  >
@@ -15,7 +15,7 @@
                           type="email"
                           v-model="form.name"
                           required
-                          placeholder="">
+                          placeholder="First and last name">
             </b-form-input>
           </b-form-group>
           <b-form-group id="exampleInputGroup2"
@@ -38,6 +38,26 @@
                           placeholder="">
             </b-form-input>
           </b-form-group>
+
+          <h1>First Trip</h1>
+          <div class="book-a-ride__formfield " v-if="show">
+                <h5>DATE</h5>
+                <input type="date" v-model="form.date" placeholder="date" style="background-color: transparent;">
+              </div>
+
+          <b-form-group id="exampleInputGroup4"
+                        label="Email:"
+                        label-for="exampleInput3">
+              <b-form-input id="exampleInput2"
+                          type="text"
+                          v-model="form.email"
+                          required
+                          placeholder="">
+            </b-form-input>
+          </b-form-group>
+
+
+          
 
           <b-form-group id="exampleInputGroup3"
                         label="Add airline and flight #  /  cruise name"
