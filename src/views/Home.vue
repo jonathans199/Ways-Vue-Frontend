@@ -2,6 +2,7 @@
   <div>
     <Header/>
     <section class="hero">
+      
       <h1 class="hero-title">SELECT A SERVICE</h1>
       <div class="top-btn">
         <a href="https://app.waysfl.com/#/" target="_blank" class="top-btn__container">
@@ -48,6 +49,7 @@
                 <select v-model="form.destiny_point_id" class="book-a-ride__destiny" @click="show = true">
                   <option selected >-- Drop Off -- </option>
                   <option v-for="item in destinyPoints" :value="item.id" >{{item.name}}</option>
+                  <option selected>Custom address</option>
                 </select>
               </div>
               
@@ -57,13 +59,13 @@
               </div>
 
               <div class="book-a-ride__formfield " v-if="show">
-                <h5>HOUR</h5>
+                <h5>TIME</h5>
                 <input v-model="form.hour" type="text" placeholder="E.g: 16:00">
               </div>
               
               <div class="book-a-ride__oneway">
                 <div class="book-a-ride__passangers">
-                  <h1>passangers</h1>
+                  <h1>passengers</h1>
                   <select v-model="form.passenger_qty">
                     <option v-for="i in 33" :value="i">{{i}}</option>
                   </select>
@@ -114,14 +116,19 @@
 
     <section class="airport-trans">
       <div class="airport-trans__text">
-        <p>Proper <b>planning</b> and preparation </br>
-        prevents a poor travel experience.</p>
-        <b style="font-size: 20px;"> #dontbethepersoninthemiddleofthestreet</b>
-        <p>Use any mobile device and schedule </br> your ride <b>now</b>! </p>
+        <p>Proper <b>planning</b> and preparation prevents a </br> poor travel experience.</p>
+        <b class="airport-trans__hash"> #dontbethepersoninthemiddleofthestreet</b>
+        <br>  </br>
+        <br>  </br>
+        <p>Use any mobile device and schedule your</p> 
+        <a v-scroll-to=" '#book-a-ride' " href="#" class="airport-trans__btn">
+          <span>ride now !</span>
+        </a> </p>
       </div>
     </section>
     
     <Payment/>
+    <CustomAddress/>
 
     <Footer/>
   </div>
@@ -134,6 +141,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import * as config from '@/config/settings'
 import Payment from '@/views/Modal/Payment'
+import CustomAddress from '@/views/Modal/CustomAddress'
 import { serverBus } from '@/main'
 
 export default {
@@ -141,7 +149,8 @@ export default {
   components: {
     Footer,
     Header,
-    Payment
+    Payment,
+    CustomAddress
   },
 
   data(){

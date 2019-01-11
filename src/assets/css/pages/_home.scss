@@ -11,15 +11,16 @@
   background-color: black;
   background-position: center;
   background-size: cover;
-  padding: 20% 10%;
+  padding: 12% 10%;
 
   height: 100%;
 
   &-title { 
-    position: absolute;
-    top: 17rem;
+    // position: absolute;
+    // top: 17rem;
     font-size: 3rem;
     font-weight: 100;
+    padding: 2rem;
   }
 }
 
@@ -291,13 +292,10 @@
      background-color: #fff399;
 }
 
-
 .input-label {
   float: left;
   padding: 10px 0;
 }
-
-
 
 .about {
   height: 100%;
@@ -330,29 +328,43 @@
 
 
 .airport-trans {
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
+  display: flex;
+  justify-content: center;
 
   background-image: url('@../../assets/img/cruise2.jpg');
   background-position: center;
-  text-align: center;
+  text-align: left;
   height: 90rem;
   color: white;
-  padding-top: 130px;
+  padding-top: 80px;
 
   &__text p{
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
-    padding: 0rem 7rem;
-    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: left;
+    // padding: 0rem 7rem;
+    
     line-height: 52px;
     
   }
 
   &__text b {
     color: #e9b92b;
+    text-align: left;
+  }
+
+  &__btn{
+    background-color: #e9b92b;
+    padding: 1rem;
+    border-radius: 7px;
+    color: black;
+    font-size: 26px;
+    padding: .5rem 3rem;
+    font-weight: 700;
+  }
+
+  &__hash{
+    font-size: 26px;
   }
 }
 
@@ -374,6 +386,10 @@
 }
 
 @media (max-width: 1000px) {
+  .top-btn__rightside {
+    padding: 1rem 2rem;
+  }
+
   .about-features {
     flex-direction: column;
   }
@@ -411,11 +427,11 @@
   }
 
   .hero {
-    padding: 85% 0;
+    padding: 50% 0;
   }
 
   .top-btn__fourpoints{
-   display: none;
+    width: 15rem;
   }
   .top-btn__title {
     font-size: 2rem;
@@ -435,6 +451,20 @@
 
   .bottom-section__btn {
     padding: 3rem;
+    
   }
 
+  .airport-trans__hash{
+    font-size: 14px;
+    padding: 0 2rem;
+  }
+
+  .airport-trans__btn{
+    margin: 0 2rem;
+  }
+
+  .airport-trans__text p{
+    font-size: 30px;
+    padding: 0 2rem;
+  }
 }
