@@ -1,8 +1,10 @@
 <template>
   <footer class="footer__container">
-        <div class="">
-          <img class="footer-logo" src="@/assets/img/ways-logo.png" alt="">
-        </div>
+        <a href="/#/locations">
+          <div class="">
+            <img class="footer-logo" src="@/assets/img/ways-logo.png" alt="">
+          </div>
+        </a>
         <div class="footer-links">
           <ul>
             <li> <router-link to="/FAQ">FAQ</router-link></li>

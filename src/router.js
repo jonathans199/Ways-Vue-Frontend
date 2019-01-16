@@ -4,6 +4,7 @@ import Home from './views/Home.vue'
 // import Checkout from '@/views/Checkout.vue'
 // import About from '@/views/About.vue'
 import FAQ from '@/views/FAQ.vue'
+import Locations from '@/views/Locations'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/#about',
       name: 'about',
       component: []
+    },
+    {
+      path: '/locations',
+      name: 'locations',
+      component: Locations
     }
   ]
 })
