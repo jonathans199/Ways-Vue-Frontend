@@ -215,6 +215,8 @@
         background-color: #ffe30242;
         color: black;
     }
+
+      
   }
 
   &__passangers {
@@ -254,6 +256,45 @@
     border-bottom: solid 1px #777;
     font-size: 12px;
   }
+
+  &__textarea {
+    background-color: #fff399;
+    display: flex;
+    justify-content: space-around;
+
+    resize: vertical;
+    overflow: auto;
+
+    width: 90%;
+    padding: 1rem;
+    margin-top: 3rem;
+    border-radius: 40px;
+    height: 150px;
+
+    
+      & h5 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        padding-top: 15%;
+
+      }
+
+      & input {
+        width: 70%;
+        border: none;
+        font-size: 1.5rem;
+        border-radius: 30px;
+        padding: 20px;
+        
+      }
+
+      & input[type=text] {
+        background-color: #ffe30242;
+        color: black;
+    }
+
+  }
+
 }
 
 .radio-btn{
