@@ -8,7 +8,11 @@
       <div class="about__container container">
         <h1>BOOK A RIDE</h1>
         <br/>
-        <h1>Fort Lauderdale Airport to Port Everglades/Ft. Lauderdale Hotels/City Limits</h1>
+        <table>
+          <tr>
+            <th class="type">Fort Lauderdale Airport to Port Everglades/Ft. Lauderdale Hotels/City Limits</th>
+          </tr>
+        </table>
         <table class="table table-dark">
           <thead>
             <tr>
@@ -37,11 +41,92 @@
           </tbody>
           
         </table>
-        <p>Private shuttles/Nonstop To reserve this service, please click on the BOOK NOW button or call (1800- 529-6061) Yes, pick up at private residences are available. Prices listed is per group. Meet and Greet available $40 additional</p>
-
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
 
         <br/>
-        <h1>Fort Lauderdale Airport to Port Everglades/Ft. Lauderdale Hotels/City Limits</h1>
+        <table>
+          <tr>
+            <th class="type">Fort Lauderdale Airport to Port of Miami/Miami Downtown/Miami Beach</th>
+          </tr>
+        </table>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">PAX</th>
+              <th scope="col">1 - 6</th>
+              <th scope="col">7 - 10</th>
+              <th scope="col">11 - 14</th>
+              <th scope="col">15 - 21</th>
+              <th scope="col">22 - 33</th>
+              <th scope="col">34 - 45</th>
+              <th scope="col">46 - 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td>$97</td>
+              <td>$115</td>
+              <td>$175</td>
+              <td>$230</td>
+              <td>$290</td>
+              <td>$430</td>
+              <td>$550</td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
+
+        <br/>
+        <table>
+          <tr>
+            <th class="type">Fort Lauderdale Airport to West Palm Beach Airport</th>
+          </tr>
+        </table>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">PAX</th>
+              <th scope="col">1 - 6</th>
+              <th scope="col">7 - 10</th>
+              <th scope="col">11 - 14</th>
+              <th scope="col">15 - 21</th>
+              <th scope="col">22 - 33</th>
+              <th scope="col">34 - 45</th>
+              <th scope="col">46 - 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td>$150</td>
+              <td>$195</td>
+              <td>$240</td>
+              <td>$350</td>
+              <td>$400</td>
+              <td>$450</td>
+              <td>$590</td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
+
+        <br/>
+        <table>
+          <tr>
+            <th class="type">Port Everglades to Fort Lauderdale/Hotels/City Limits</th>
+          </tr>
+        </table>
         <table class="table table-dark">
           <thead>
             <tr>
@@ -70,9 +155,163 @@
           </tbody>
           
         </table>
-        <p>Private shuttles/Nonstop To reserve this service, please click on the BOOK NOW button or call (1800- 529-6061) Yes, pick up at private residences are available. Prices listed is per group. Meet and Greet available $40 additional</p>
 
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
 
+        <br/>
+        <table>
+          <tr>
+            <th class="type">Port Everglades to Miami Airport/Miami Downtown/Miami Beach</th>
+          </tr>
+        </table>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">PAX</th>
+              <th scope="col">1 - 6</th>
+              <th scope="col">7 - 10</th>
+              <th scope="col">11 - 14</th>
+              <th scope="col">15 - 21</th>
+              <th scope="col">22 - 33</th>
+              <th scope="col">34 - 45</th>
+              <th scope="col">46 - 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td>$97</td>
+              <td>$115</td>
+              <td>$175</td>
+              <td>$230</td>
+              <td>$290</td>
+              <td>$430</td>
+              <td>$550</td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
+
+        <br/>
+        <table>
+          <tr>
+            <th class="type">Port Everglades to West Palm Beach Airport</th>
+          </tr>
+        </table>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">PAX</th>
+              <th scope="col">1 - 6</th>
+              <th scope="col">7 - 10</th>
+              <th scope="col">11 - 14</th>
+              <th scope="col">15 - 21</th>
+              <th scope="col">22 - 33</th>
+              <th scope="col">34 - 45</th>
+              <th scope="col">46 - 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td>$150</td>
+              <td>$195</td>
+              <td>$240</td>
+              <td>$350</td>
+              <td>$400</td>
+              <td>$450</td>
+              <td>$590</td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
+
+        <br/>
+        <table>
+          <tr>
+            <th class="type">Miami Airport to Port of Miami/Miami Downtown/ Miami Beach</th>
+          </tr>
+        </table>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">PAX</th>
+              <th scope="col">1 - 6</th>
+              <th scope="col">7 - 10</th>
+              <th scope="col">11 - 14</th>
+              <th scope="col">15 - 21</th>
+              <th scope="col">22 - 33</th>
+              <th scope="col">34 - 45</th>
+              <th scope="col">46 - 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td>$97</td>
+              <td>$115</td>
+              <td>$175</td>
+              <td>$230</td>
+              <td>$290</td>
+              <td>$430</td>
+              <td>$550</td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
+        
+        <br/>
+        <table>
+          <tr>
+            <th class="type">Miami Airport to Port Everglades/Fort Lauderdale Hotels/City limits</th>
+          </tr>
+        </table>
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">PAX</th>
+              <th scope="col">1 - 6</th>
+              <th scope="col">7 - 10</th>
+              <th scope="col">11 - 14</th>
+              <th scope="col">15 - 21</th>
+              <th scope="col">22 - 33</th>
+              <th scope="col">34 - 45</th>
+              <th scope="col">46 - 55</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Price</th>
+              <td>$150</td>
+              <td>$195</td>
+              <td>$240</td>
+              <td>$350</td>
+              <td>$400</td>
+              <td>$450</td>
+              <td>$590</td>
+            </tr>
+            
+          </tbody>
+          
+        </table>
+        <p><span class="class">Private shuttles/Nonstop</span> To reserve this service, please click on the <span class="class">BOOK NOW</span> button or call <span class="class">(1800- 529-6061)</span> Yes, pick up at <span class="class">private residences</span> are available. Prices listed is <span class="class">per group</span>. Meet and Greet available $40 additional</p>
+        <button type="button" class="btn btn-lg type">Book Now!!</button>
+        <br/>
+        
         </br>
 
         <form>
@@ -187,6 +426,15 @@
 
   h1 {
     padding-bottom: 30px;
+  }
+
+  .class {
+    color: #ffc107;
+  }
+  
+  .type {
+    background-color: black;
+    color: white;
   }
 
 @media (max-width: 1000px){
