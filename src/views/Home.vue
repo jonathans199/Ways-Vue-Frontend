@@ -35,7 +35,47 @@
       <div class="book-a-ride__city"></div>
       <div class="book-a-ride__content">
         <form class="book-a-ride__form" @submit="createRide">
-          <div class="book-a-ride__formlabel">book a ride</div>
+          <div class="book-a-ride__formlabel">contact us </div>
+            <div class="book-a-ride__formcontent">
+
+              <div class="book-a-ride__formfield">
+                <h5>FIRST NAME</h5>
+                <input type="text" v-model="form.firstName">
+              </div>
+              <div class="book-a-ride__formfield">
+                <h5>LAST NAME</h5>
+                <input type="text" v-model="form.lastName">
+              </div>
+              <div class="book-a-ride__formfield">
+                <h5>EMAIL</h5>
+                <input type="text" v-model="form.email">
+              </div>
+              <div class="book-a-ride__formfield">
+                <h5>PHONE</h5>
+                <input type="text" v-model="form.phone">
+              </div>
+              <div class="book-a-ride__textarea">
+                <h5>MESSAGE</h5>
+                <input type="text-area" rows="9" cols="50" v-model="form.message">
+              </div>
+              
+              <div class="book-a-ride__oneway">
+                <button v-if="!loading" class="btn btn-warning" :disabled="form.fullName && form.email && form.phone && form.message ? (false) : (true)">SEND</button>
+                <button v-if="loading" class="btn btn-warning" >LOADING <i class="fa fa-spinner fa-spin"></i></button>
+              </div>
+              <p class="text-center book-a-ride__lowertext col-12">Ways nonstop shuttle will take you directly to your destination. Different from share ride, you do not share the ride with other passengers. Good for families, friends and large groups.</p>
+            
+            </div>
+        </form>
+        <h1 class="book-a-ride__slogan">WE ARE THE BRIDGE TO YOUR DESTINATION</h1>
+      </div>
+    </section>
+
+    <!-- <section class="book-a-ride" id="book-a-ride">
+      <div class="book-a-ride__city"></div>
+      <div class="book-a-ride__content">
+        <form class="book-a-ride__form" @submit="createRide">
+          <div class="book-a-ride__formlabel">contact us </div>
             <div class="book-a-ride__formcontent">
 
               <div class="book-a-ride__formfield">
@@ -45,7 +85,6 @@
 
               <div class="book-a-ride__formfield">
                 <h5>DROP OFF</h5>
-                <!-- <input type="text" placeholder="Pick up address"> -->
                 <select v-model="form.destiny_point_id" class="book-a-ride__destiny" @click="show = true">
                   <option selected >-- Drop Off -- </option>
                   <option v-for="item in destinyPoints" :value="item.id" >{{item.name}}</option>
@@ -89,7 +128,7 @@
         </form>
         <h1 class="book-a-ride__slogan">WE ARE THE BRIDGE TO YOUR DESTINATION</h1>
       </div>
-    </section>
+    </section> -->
   
     <section class="about container" id="about-us">
       <h1>about ways</h1>

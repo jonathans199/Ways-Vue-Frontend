@@ -5,6 +5,7 @@ import Home from './views/Home.vue'
 // import About from '@/views/About.vue'
 import FAQ from '@/views/FAQ.vue'
 import Locations from '@/views/Locations'
+import Points from '@/views/Points'
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
       path: '/locations',
       name: 'locations',
       component: Locations
+    },
+    {
+      path: '/points',
+      name: 'points',
+      component: Points
     }
   ]
 })
