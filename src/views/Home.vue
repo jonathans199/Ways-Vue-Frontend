@@ -34,33 +34,33 @@
     <section class="book-a-ride" id="book-a-ride">
       <div class="book-a-ride__city"></div>
       <div class="book-a-ride__content">
-        <form class="book-a-ride__form" @submit="createRide">
+        <form class="book-a-ride__form" @submit="submitForm">
           <div class="book-a-ride__formlabel">contact us </div>
             <div class="book-a-ride__formcontent">
 
               <div class="book-a-ride__formfield">
                 <h5>FIRST NAME</h5>
-                <input type="text" v-model="form.firstName">
+                <input type="text" v-model="contactForm.name">
               </div>
-              <div class="book-a-ride__formfield">
+              <!-- <div class="book-a-ride__formfield">
                 <h5>LAST NAME</h5>
-                <input type="text" v-model="form.lastName">
-              </div>
+                <input type="text" v-model="contactForm.lastName">
+              </div> -->
               <div class="book-a-ride__formfield">
                 <h5>EMAIL</h5>
-                <input type="text" v-model="form.email">
+                <input type="text" v-model="contactForm.email">
               </div>
               <div class="book-a-ride__formfield">
                 <h5>PHONE</h5>
-                <input type="text" v-model="form.phone">
+                <input type="text" v-model="contactForm.phone">
               </div>
               <div class="book-a-ride__textarea">
                 <h5>MESSAGE</h5>
-                <input type="text-area" rows="9" cols="50" v-model="form.message">
+                <input type="text-area" rows="9" cols="50" v-model="contactForm.message">
               </div>
               
               <div class="book-a-ride__oneway">
-                <button v-if="!loading" class="btn btn-warning" :disabled="form.fullName && form.email && form.phone && form.message ? (false) : (true)">SEND</button>
+                <button v-if="!loading" class="btn btn-warning" :disabled="contactForm.name && contactForm.email && contactForm.phone && contactForm.message ? (false) : (true)">SEND</button>
                 <button v-if="loading" class="btn btn-warning" >LOADING <i class="fa fa-spinner fa-spin"></i></button>
               </div>
               <p class="text-center book-a-ride__lowertext col-12">Ways nonstop shuttle will take you directly to your destination. Different from share ride, you do not share the ride with other passengers. Good for families, friends and large groups.</p>
@@ -71,64 +71,7 @@
       </div>
     </section>
 
-    <!-- <section class="book-a-ride" id="book-a-ride">
-      <div class="book-a-ride__city"></div>
-      <div class="book-a-ride__content">
-        <form class="book-a-ride__form" @submit="createRide">
-          <div class="book-a-ride__formlabel">contact us </div>
-            <div class="book-a-ride__formcontent">
-
-              <div class="book-a-ride__formfield">
-                <h5>PICK UP</h5>
-                <input type="text" placeholder="Pick up address" v-model="form.address">
-              </div>
-
-              <div class="book-a-ride__formfield">
-                <h5>DROP OFF</h5>
-                <select v-model="form.destiny_point_id" class="book-a-ride__destiny" @click="show = true">
-                  <option selected >-- Drop Off -- </option>
-                  <option v-for="item in destinyPoints" :value="item.id" >{{item.name}}</option>
-                  <option selected>Custom address</option>
-                </select>
-              </div>
-              
-              <div class="book-a-ride__formfield " v-if="show">
-                <h5>DATE</h5>
-                <input type="date" v-model="form.date" placeholder="date" style="background-color: transparent;">
-              </div>
-
-              <div class="book-a-ride__formfield " v-if="show">
-                <h5>TIME</h5>
-                <input v-model="form.hour" type="text" placeholder="E.g: 16:00">
-              </div>
-              
-              <div class="book-a-ride__oneway">
-                <div class="book-a-ride__passangers">
-                  <h1>passengers</h1>
-                  <select v-model="form.passenger_qty">
-                    <option v-for="i in 33" :value="i">{{i}}</option>
-                  </select>
-                </div>
-                <h1 class="input-label">
-                  <input class="radio-btn" v-model="form.round_trip" type="radio" name="gender" :value="false"> ONE WAY
-                </h1> 
-                <br>
-                <h1 class="input-label">
-                  <input class="radio-btn" v-model="form.round_trip" type="radio" name="gender" :value="true"> ROUND TRIP
-                </h1>
-              </div>
-
-              <div class="book-a-ride__oneway">
-                <button v-if="!loading" class="btn btn-warning" :disabled="form.address && form.destiny_point_id && form.date && form.hour && form.passenger_qty ? (false) : (true)">BOOK NOW</button>
-                <button v-if="loading" class="btn btn-warning" >LOADING <i class="fa fa-spinner fa-spin"></i></button>
-              </div>
-              <p class="text-center book-a-ride__lowertext col-12">Ways nonstop shuttle will take you directly to your destination. Different from share ride, you do not share the ride with other passengers. Good for families, friends and large groups.</p>
-            
-            </div>
-        </form>
-        <h1 class="book-a-ride__slogan">WE ARE THE BRIDGE TO YOUR DESTINATION</h1>
-      </div>
-    </section> -->
+    
   
     <section class="about container" id="about-us">
       <h1>about ways</h1>
@@ -166,8 +109,8 @@
       </div>
     </section>
     
-    <Payment/>
-    <CustomAddress/>
+    <!-- <Payment/> -->
+    <!-- <CustomAddress/ -->
 
     <Footer/>
   </div>
@@ -180,7 +123,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import * as config from '@/config/settings'
 import Payment from '@/views/Modal/Payment'
-import CustomAddress from '@/views/Modal/CustomAddress'
+// import CustomAddress from '@/views/Modal/CustomAddress'
 import { serverBus } from '@/main'
 
 export default {
@@ -189,11 +132,18 @@ export default {
     Footer,
     Header,
     Payment,
-    CustomAddress
+    // CustomAddress
   },
 
   data(){
     return{
+      contactForm: {
+        name: " ",
+        email: " ",
+        phone: " ",
+        message: " ",
+        
+      },
       form: {
         round_trip: false
       },
@@ -202,73 +152,110 @@ export default {
       picker: new Date().toISOString().substr(0, 10),
       landscape: false,
       reactive: false,
-      show: false
+      show: false,
+
     }
   },
 
-  created(){
-    this.fetchDropOff()
-  },
+  // created(){
+  //   this.fetchDropOff()
+  // },
 
   methods: {
-    fetchDropOff(){
+    // fetchDropOff(){
+    //   axios({
+    //     url: config.defaultURL + '/points?type=12',
+    //     method:'get',
+    //     data:this.form,
+    //     headers: {
+    //       "content-type": "application/json"
+    //     }
+    //   })
+    //   .then((response) => {
+    //     if(response.status === 200) {
+    //       this.destinyPoints = response.data
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     error.response.data.map((m,index) => {
+    //       this.loader = false
+    //       this.$toasted.show(m, {
+    //         position:'top-right',
+    //         duration: 5000,
+    //         type: 'error',
+    //         closeOnSwipe: true
+    //       })
+    //     })
+    //   })
+    // },
+
+    submitForm(evt){
+      evt.preventDefault()
+      // this.loading = true
       axios({
-        url: config.defaultURL + '/points?type=12',
-        method:'get',
-        data:this.form,
+        url: config.defaultURL + '/contact_forms',
+        method: 'post',
+        data: this.contactForm,
         headers: {
           "content-type": "application/json"
         }
       })
-      .then((response) => {
-        if(response.status === 200) {
-          this.destinyPoints = response.data
-        }
+       .then(response => {
+         this.$toasted.show('Thank you for contacting contact')({
+           position: 'bottom-center',
+           duration: 1000,
+           type: 'success',
+           closeOnSwipe: true
+         })
+
+        // if(response.status === 200) {
+        //   this.contactForm = response.data
+        // }
       })
-      .catch((error) => {
-        error.response.data.map((m,index) => {
-          this.loader = false
-          this.$toasted.show(m, {
-            position:'top-right',
-            duration: 5000,
-            type: 'error',
-            closeOnSwipe: true
-          })
-        })
-      })
+      // .catch((error) => {
+      //   error.response.data.map((m,index) => {
+      //     this.loader = false
+      //     this.$toasted.show(m, {
+      //       position:'top-right',
+      //       duration: 5000,
+      //       type: 'error',
+      //       closeOnSwipe: true
+      //     })
+      //   })
+      // })
+      this.contactForm = [ ]
     },
 
-    createRide(evt){
-      evt.preventDefault()
-      this.loading = true
-      axios({
-        url: config.defaultURL + '/rides',
-        method:'post',
-        data:this.form,
-        headers: {
-          "content-type": "application/json"
-        }
-      })
-      .then((response) => {
-        if(response.status === 201) {
-          this.loading = false
-          localStorage.setItem('currentRide', JSON.stringify(response.data))
-          serverBus.$emit('openPayment', response.data.ride_price)
-        }
-      })
-      .catch((error) => {
-        error.response.data.map((m,index) => {
-          this.loading = false
-          this.$toasted.show(m, {
-            position:'top-right',
-            duration: 5000,
-            type: 'error',
-            closeOnSwipe: true
-          })
-        })
-      })
-    }
+    // createRide(evt){
+    //   evt.preventDefault()
+    //   this.loading = true
+    //   axios({
+    //     url: config.defaultURL + '/rides',
+    //     method:'post',
+    //     data:this.form,
+    //     headers: {
+    //       "content-type": "application/json"
+    //     }
+    //   })
+    //   .then((response) => {
+    //     if(response.status === 201) {
+    //       this.loading = false
+    //       localStorage.setItem('currentRide', JSON.stringify(response.data))
+    //       serverBus.$emit('openPayment', response.data.ride_price)
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     error.response.data.map((m,index) => {
+    //       this.loading = false
+    //       this.$toasted.show(m, {
+    //         position:'top-right',
+    //         duration: 5000,
+    //         type: 'error',
+    //         closeOnSwipe: true
+    //       })
+    //     })
+    //   })
+    // }
   }
 }
-
 </script>
